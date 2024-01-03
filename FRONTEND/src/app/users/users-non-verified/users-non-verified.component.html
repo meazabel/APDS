@@ -1,0 +1,12 @@
+<h2>Non Verified Users</h2>
+<div *ngFor="let user of users">
+  Username:  {{user.username}}
+  <br>
+  Department:  {{user.department}}
+  <br>
+  Is Verified?:  {{user.isVerified}}
+  <br>
+  <button (click)="onVerify(user._id)">Verify</button>
+  <button (click)="onDelete(user._id)">Delete</button>
+  <br><br><br>
+</div>

@@ -1,0 +1,20 @@
+<h2> Login </h2>
+<form (submit)="onLogin(loginForm)" #loginForm="ngForm">
+  <input type="text"
+         ngModel name="enteredUsername"
+         placeholder="Username"
+         required
+         minlength="1"
+         #enteredUsername="ngModel">
+  <div *ngIf = "enteredUsername.invalid && (enteredUsername.dirty || enteredUsername.touched)">invalid </div>
+  <br>
+  <input type="password"
+         ngModel name="enteredPassword"
+         placeholder="Password"
+         required
+         minlength="1"
+         #enteredPassword="ngModel">
+  <div *ngIf = "enteredPassword.invalid && (enteredPassword.dirty || enteredPassword.touched)">invalid </div>
+  <br>
+  <button type="submit"> Login</button>
+</form>

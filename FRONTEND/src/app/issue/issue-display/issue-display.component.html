@@ -1,0 +1,21 @@
+<h2>Issues</h2>
+<div *ngFor="let issue of issues">
+  Title:  {{issue.title}}
+  <br>
+  Description:  {{issue.description}}
+  <br>
+  Status:  {{issue.status}}
+  <br><br>
+  Change status:
+  <select ngModel name="enteredStatus"
+          placeholder="Issue Status"
+          #enteredStatus="ngModel">
+    <option value="Open">Open</option>
+    <option value="In Progress">In Progress</option>
+    <option value="Closed">Closed</option>
+  </select>
+  <br>
+  <button (click)="onEdit(issue._id, enteredStatus)">Edit</button>
+  <button (click)="onDelete(issue._id)">Delete</button>
+  <br><br><br>
+</div>

@@ -1,0 +1,101 @@
+### register new user
+POST https://localhost:3000/api/users/register
+Content-Type: application/json
+
+{
+  "username": "NewUser",
+  "password": "abcd",
+  "department": "IT"
+}
+
+### login for user
+POST https://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+  "username": "NewUser",
+  "password": "abcd"
+}
+
+### login for admin
+POST https://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+  "username": "mea",
+  "password": "1234"
+}
+
+### get non verified users
+GET https://localhost:3000/api/admin/non-verified-users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lYSIsInVzZXJpZCI6IjY1MTY5N2M1NWJmZTdiM2MzYmNhNTM4YSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5OTIwMTc1MiwiZXhwIjoxNjk5MjA1MzUyfQ.JpzPObI_7p8ni-N1XKIsweCulQoyvLpgtEvegEjEBGI
+
+{
+
+}
+
+### verify user
+POST https://localhost:3000/api/admin/verify-user/6548e8664af88355814d8cc8
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5ld1VzZXIiLCJ1c2VyaWQiOiI2NTQ3YzJjZTQwZTQ4ODA1YWE2YWY2MTAiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjk5Mjc2NTcxLCJleHAiOjE2OTkyODAxNzF9.zjLxKlo7MIyRoB8e8VihV609YlWBes8ToIvbcoklWfY
+
+{
+
+}
+
+### get all users
+GET https://localhost:3000/api/admin/all-users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik5ld1VzZXIiLCJ1c2VyaWQiOiI2NTQ3YzJjZTQwZTQ4ODA1YWE2YWY2MTAiLCJpc0FkbWluIjpmYWxzZSwiaWF0IjoxNjk5Mjc2NTcxLCJleHAiOjE2OTkyODAxNzF9.zjLxKlo7MIyRoB8e8VihV609YlWBes8ToIvbcoklWfY
+
+{
+
+}
+
+### get all issues
+GET https://localhost:3000/api/issues/all-issues
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lYSIsInVzZXJpZCI6IjY1MTY5N2M1NWJmZTdiM2MzYmNhNTM4YSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5OTIwMjQ5NCwiZXhwIjoxNjk5MjA2MDk0fQ.uGqcY_4r0Be2FipNkHnvQvj4XdLydKUoQ6Es0V46BTY
+
+{
+
+}
+
+### create new issue
+POST https://localhost:3000/api/issues/add-issue
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lYSIsInVzZXJpZCI6IjY1MTY5N2M1NWJmZTdiM2MzYmNhNTM4YSIsImlhdCI6MTY5NjAwNDYxOCwiZXhwIjoxNjk2MDA4MjE4fQ.Jeqdc70zcZn8yazQgx4oJ56I2pnJxn14gKH97PSzgUc
+
+{
+  "title" : "issue2",
+  "description": "issue for the purpose of testing",
+  "status": "Open"
+}
+
+### update issue
+PUT https://localhost:3000/api/issues/update-issue/6520a26bb14c558f74fa7a0e
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ik1hcnlhbSIsInVzZXJpZCI6IjY1MjA0NWE3ZTZjZjk0ZDQ1YWNiNzNjNiIsImlhdCI6MTY5NjYzODU4MiwiZXhwIjoxNjk2NjQyMTgyfQ.leQuIYi9nLllNmgF303DnaS8UXXai3E68Qjo63cN3to
+
+{
+  "status": "Closed"
+}
+
+### delete issue(only admin can)
+DELETE https://localhost:3000/api/issues/delete-issue/6516fa78ecfbf7fff1862a5f
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lYSIsInVzZXJpZCI6IjY1MTY5N2M1NWJmZTdiM2MzYmNhNTM4YSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5OTIwMjQ5NCwiZXhwIjoxNjk5MjA2MDk0fQ.uGqcY_4r0Be2FipNkHnvQvj4XdLydKUoQ6Es0V46BTY
+
+{
+
+}
+
+### delete user(only admin can)
+DELETE https://localhost:3000/api/admin/delete-user/6547c2ce40e48805aa6af610
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1lYSIsInVzZXJpZCI6IjY1MTY5N2M1NWJmZTdiM2MzYmNhNTM4YSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY5OTI3NjczOCwiZXhwIjoxNjk5MjgwMzM4fQ.-MHxATyt_Jn3IdoQ4cSYWCyj50ojgvkRI7dQaBVeFz8
+
+{
+
+}

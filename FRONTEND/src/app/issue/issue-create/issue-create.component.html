@@ -1,0 +1,23 @@
+<h2>Add New Issue</h2>
+<form (submit)="onAddIssue(addIssue)" #addIssue="ngForm">
+  <input type="text"
+         ngModel name="enteredTitle"
+         placeholder="Issue Title"
+         required
+         #enteredTitle="ngModel">
+  <input type="text"
+         ngModel name="enteredDescription"
+         placeholder="Issue Description"
+         minlength="1"
+         #enteredDescription="ngModel">
+  <br>
+  <select ngModel name="enteredStatus"
+    placeholder="Issue Status"
+    #enteredStatus="ngModel">
+    <option value="Open">Open</option>
+    <option value="In Progress">In Progress</option>
+    <option value="Closed">Closed</option>
+  </select>
+  <br>
+  <button type="submit"> Add Issue</button>
+</form>
