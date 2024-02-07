@@ -32,8 +32,8 @@ Password: 1234
 
 ## Troubleshooting
 ### Error code "EACCES"
-If you get the error code "EACCES" when starting the client, it could be that the port
-is being used (default port is 4200), try running the following command in the FRONTEND folder:
+If you get the error code "EACCES" when starting the client, it might be because you dont have permission 
+to access the port (default port is 4200), try running the following command in the FRONTEND folder:
 - ng serve --port {port number}
 
 I usually use 4000, so the command would be:

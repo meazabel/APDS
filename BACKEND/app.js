@@ -8,9 +8,10 @@ const options = {
     server: {sslCA: cert}
 }
 const helmet =  require ("helmet")
+require('dotenv').config();
 
 //connection string for mongoDB
-const connString = 'mongodb+srv://meazabel:3xEZx0Yv9RDEq6AQ@cluster0.imohdke.mongodb.net/test?retryWrites=true&w=majority'
+const connString = process.env.MONGO_DB_CONN_STRING
 
 //importing routes
 const userRoutes = require("./routes/userRoutes");
