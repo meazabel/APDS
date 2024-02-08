@@ -1,5 +1,4 @@
 # APDS: Application development security
-I made this app in 3rd year uni.
 
 ## A short introduction  to the application:  
 The interdepartmental bulletin board is supposed to be a government application that 
